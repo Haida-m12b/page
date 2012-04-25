@@ -3,6 +3,13 @@ require 'test_helper'
 class CmsControllerTest < ActionController::TestCase
   setup do
     @cm = cms(:one)
+  @update ={
+    :title => 'hgjhb',
+    :permalink => 'fdcd',
+    :body => 'nnnmj',
+    :created_at => '03/04/2012',
+    :updated_at => '03/05/2012'
+  }  
   end
 
   test "should get index" do
@@ -18,7 +25,8 @@ class CmsControllerTest < ActionController::TestCase
 
   test "should create cm" do
     assert_difference('Cm.count') do
-      post :create, cm: @cm.attributes
+      
+      post :create, :cm => @update
     end
 
     assert_redirected_to cm_path(assigns(:cm))
@@ -35,8 +43,8 @@ class CmsControllerTest < ActionController::TestCase
   end
 
   test "should update cm" do
-    put :update, id: @cm, cm: @cm.attributes
-    assert_redirected_to cm_path(assigns(:cm))
+    put :update, :id => @cm.to_param , :cm => @update
+        assert_redirected_to cm_path(assigns(:cm))
   end
 
   test "should destroy cm" do
