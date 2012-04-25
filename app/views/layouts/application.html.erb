@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>  
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <title>Page</title>
+</head>
+<body id="color">
+<div class="cms">
+	  	<div id="columns" >
+<div class="side" >
+<a href="http://www.facebook.com" >facebook</a><br />
+<a href="http://www.googletarnslate.com" >googletarnslate</a><br />
+<a href="http://www.ruby.com" >Ruby</a><br />
+<a href="http://www..../contact" >help</a><br />
+
+</div>
+<div class="cms">
+<%= yield %>
+</div>
+
+
+</body>
+
+</html>
+

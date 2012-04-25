@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @cm.title %>
+</p>
+
+<p>
+  <b>Permalink:</b>
+  <%= @cm.permalink %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @cm.body %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= @cm.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @cm.updated_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_cm_path(@cm) %> |
+<%= link_to 'Back', cms_path %>

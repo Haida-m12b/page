@@ -1,0 +1,65 @@
+
+// Place all the styles related to the cms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.cms {
+  h1 {color:pink;} 
+h1 {text-align:center;} 
+
+table {
+border-collapse: collapse;
+
+}
+ul.a {list-style-type:circle;}
+.tablea {
+
+}
+#columns {
+background: #ffff99;
+}
+
+
+table tr td {
+ 
+vertical-align: top;
+}
+.list_image {
+width: 60px;
+height: 70px;
+}
+.list_description {
+width: 50%;
+dl {
+margin:0;
+}
+dt {
+  font-size: larger;
+}
+color: #ffcccc;
+font-weight: bold;
+font-size: small;
+dd {
+margin:1;                                         
+}
+}
+.list_actions {
+font-size: x-large;
+text-align: center;
+padding-left: 1em;
+}
+a.one:link {color:#ff0000;}ul.a {list-style-type:circle;}
+table,th,td {
+border:1px solid #ffcc00; }
+.side {
+align: bottom;
+padding-top: 1em;
+padding-left: 1em;
+padding-bottom: 1em;
+width: 16em;
+
+}
+#side a {
+color: #bfb;
+font-size: small;
+}
+}

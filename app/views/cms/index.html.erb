@@ -1,0 +1,47 @@
+
+<h1>Content Mangement System (CMS)</h1>
+<body id="color">
+	
+
+<table>
+  <tr >
+    <th>Title</th>
+    <th>Permalink</th>
+    <th>Body</th>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cms.each do |cm| %>
+  <tr class="<%= cycle('list_line_even') %>" >
+    <td><%= cm.title %></td>
+    <td><%= image_tag(cm.permalink, :class => 'list_image') %></td>
+    <td><%= cm.body %></td>
+    <td><%= cm.created_at %></td>
+    <td><%= cm.updated_at %></td>
+    <td><%= link_to 'Show', cm %></td>
+    <td><%= link_to 'Edit', edit_cm_path(cm) %></td>
+    <td><%= link_to 'Delete', cm, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cm', new_cm_path %>
+
+
+ <ul class="a"> 
+ 	<% @cms.each do |cm| %>
+<li><%=link_to cm.title ,cm %></li>
+<% end %>	
+
+</ul>
+
+
+
+</body>
+
