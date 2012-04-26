@@ -30609,3 +30609,11 @@ Served asset /application.js - 304 Not Modified (0ms)
   [1m[35m (103.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
   [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
   [1m[35m (112.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120417203507')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (93.6ms)[0m  [1mCREATE TABLE "cms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "permalink" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (62.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (15.6ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (62.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (78.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120417203507')
