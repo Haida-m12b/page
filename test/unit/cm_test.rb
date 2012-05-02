@@ -16,9 +16,15 @@ assert cm.errors[:created_at].any?
 assert cm.errors[:updated_at].any?
 end
 test "cm is not valid without a unique title" do
-cm = cm.new(:title => cm(:ruby).title,
-:description => "yyy",)
+	cm=Cm.new(:title => cms(:cmspage).title,
+		:body => cms(:cmspage).body ,
+		:permalink =>cms(:cmspage).body ,
+		:created_at => cms(:cmspage).created_at,
+		:updated_at => cms(:cmspage).updated_at
+	)
 assert !cm.save
-assert_equal "has already been taken", cm.errors[:title].join('; ')
+assert_equal "has already been taken", 
+cm.errors[:title].join('; ')
 end
+
 end

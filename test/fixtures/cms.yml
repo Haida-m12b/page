@@ -14,14 +14,9 @@ two:
   created_at: 2012-04-17 13:35:07
   updated_at: 2012-04-17 13:35:07
   
- ruby:
-title:
-Programming Ruby 1.9
-description:
-Ruby is the fastest growing and most
-exciting dynamic
-language out there. If you need to get
-working programs
-delivered fast, you should add Ruby to
-your toolbox.
-
+cmspage:
+  title: Content management system(CMS).
+  permalink: content management system  is a web site that have many pages.
+  body: The content management pages have database and network topic .
+  created_at: 2012-04-14
+  updated_at : 2012-03-11

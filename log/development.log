@@ -30979,3 +30979,541 @@ Served asset /rails.png - 304 Not Modified (0ms)
   [1m[35m (10.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
   [1m[36m (1.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
   [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120417203507')
+
+
+Started GET "/cms" for 127.0.0.1 at 2012-05-06 10:37:47 +0430
+Processing by CmsController#index as HTML
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" [0m
+  Rendered cms/index.html.erb within layouts/application (845.0ms)
+Compiled jquery.js  (6ms)  (pid 6796)
+Compiled jquery_ujs.js  (0ms)  (pid 6796)
+Compiled application.js  (2439ms)  (pid 6796)
+Completed 200 OK in 3652ms (Views: 3638.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-05-06 10:37:57 +0430
+Served asset /application.css - 200 OK (10ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-05-06 10:37:58 +0430
+Served asset /scaffolds.css - 200 OK (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-05-06 10:37:58 +0430
+Served asset /jquery.js - 200 OK (11ms)
+
+
+Started GET "/assets/cms.css?body=1" for 127.0.0.1 at 2012-05-06 10:37:58 +0430
+Served asset /cms.css - 200 OK (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-05-06 10:37:59 +0430
+Served asset /jquery_ujs.js - 200 OK (6ms)
+
+
+Started GET "/assets/cms.js?body=1" for 127.0.0.1 at 2012-05-06 10:37:59 +0430
+Served asset /cms.js - 200 OK (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-05-06 10:37:59 +0430
+Served asset /application.js - 200 OK (14ms)
+
+
+Started GET "/assets/z.jpg" for 127.0.0.1 at 2012-05-06 10:37:59 +0430
+Served asset /z.jpg - 200 OK (7ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-05-06 10:37:59 +0430
+Served asset /rails.png - 200 OK (6ms)
+
+
+Started GET "/assets/p.jpg" for 127.0.0.1 at 2012-05-06 10:37:59 +0430
+Served asset /p.jpg - 200 OK (5ms)
+
+
+Started GET "/assets/w.jpg" for 127.0.0.1 at 2012-05-06 10:37:59 +0430
+Served asset /w.jpg - 200 OK (4ms)
+
+
+Started GET "/assets/v.jpg" for 127.0.0.1 at 2012-05-06 10:38:00 +0430
+Served asset /v.jpg - 200 OK (3ms)
+
+
+Started GET "/cms/18" for 127.0.0.1 at 2012-05-06 10:38:44 +0430
+Processing by CmsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mCm Load (1.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? LIMIT 1  [["id", "18"]]
+  Rendered cms/show.html.erb within layouts/application (142.0ms)
+Completed 200 OK in 170ms (Views: 167.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cms/new" for 127.0.0.1 at 2012-05-06 10:38:56 +0430
+Processing by CmsController#new as HTML
+  Rendered cms/_form.html.erb (179.0ms)
+  Rendered cms/new.html.erb within layouts/application (370.0ms)
+Completed 200 OK in 396ms (Views: 394.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cms" for 127.0.0.1 at 2012-05-06 10:39:11 +0430
+Processing by CmsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GdxipelJli9Sd0OiTxM+Oi+2w3aaxJt8UN/TSdzc8P0=", "cm"=>{"title"=>"dsddwedwe", "permalink"=>"", "body"=>"", "created_at(1i)"=>"2012", "created_at(2i)"=>"5", "created_at(3i)"=>"6", "created_at(4i)"=>"06", "created_at(5i)"=>"08", "updated_at(1i)"=>"2012", "updated_at(2i)"=>"5", "updated_at(3i)"=>"6", "updated_at(4i)"=>"06", "updated_at(5i)"=>"08"}, "commit"=>"Create Cm"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Exists (1.0ms)[0m  SELECT 1 FROM "cms" WHERE "cms"."title" = 'dsddwedwe' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered cms/_form.html.erb (200.0ms)
+  Rendered cms/new.html.erb within layouts/application (206.0ms)
+Completed 200 OK in 603ms (Views: 231.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cms" for 127.0.0.1 at 2012-05-06 10:39:33 +0430
+Processing by CmsController#index as HTML
+  [1m[35mCm Load (1.0ms)[0m  SELECT "cms".* FROM "cms" 
+  Rendered cms/index.html.erb within layouts/application (726.0ms)
+Completed 200 OK in 752ms (Views: 748.0ms | ActiveRecord: 1.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (11.0ms)[0m  [1mCREATE TABLE "cms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "permalink" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (9.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (10.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120417203507')
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (1.0ms)[0m  select sqlite_version(*)
+  [1m[36m (11.0ms)[0m  [1mCREATE TABLE "cms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "permalink" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (9.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (11.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120417203507')
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (1.0ms)[0m  select sqlite_version(*)
+  [1m[36m (11.0ms)[0m  [1mCREATE TABLE "cms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "permalink" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (9.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (9.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120417203507')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (10.0ms)[0m  [1mCREATE TABLE "cms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "permalink" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (8.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (10.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (1.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120417203507')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (38.0ms)[0m  [1mCREATE TABLE "cms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "permalink" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (10.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (9.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120417203507')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (1.0ms)[0m  select sqlite_version(*)
+  [1m[36m (11.0ms)[0m  [1mCREATE TABLE "cms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "permalink" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (7.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (8.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120417203507')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (10.0ms)[0m  [1mCREATE TABLE "cms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "permalink" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (9.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (7.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (7.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120417203507')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (10.0ms)[0m  [1mCREATE TABLE "cms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "permalink" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (9.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (8.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (9.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120417203507')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (10.0ms)[0m  [1mCREATE TABLE "cms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "permalink" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (8.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (8.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (9.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120417203507')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (1.0ms)[0m  select sqlite_version(*)
+  [1m[36m (11.0ms)[0m  [1mCREATE TABLE "cms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "permalink" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (6.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (7.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (6.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120417203507')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (1.0ms)[0m  select sqlite_version(*)
+  [1m[36m (11.0ms)[0m  [1mCREATE TABLE "cms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "permalink" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (8.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (9.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (7.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120417203507')
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (10.0ms)[0m  [1mCREATE TABLE "cms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "permalink" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (8.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (8.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (7.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120417203507')
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (11.0ms)[0m  [1mCREATE TABLE "cms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "permalink" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (6.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (9.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (6.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120417203507')
+
+
+Started GET "/cms" for 127.0.0.1 at 2012-05-06 11:44:25 +0430
+Processing by CmsController#index as HTML
+  [1m[36mCm Load (1.0ms)[0m  [1mSELECT "cms".* FROM "cms" [0m
+  Rendered cms/index.html.erb within layouts/application (577.0ms)
+Completed 200 OK in 594ms (Views: 592.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-05-06 11:44:27 +0430
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-05-06 11:44:27 +0430
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-05-06 11:44:27 +0430
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cms.css?body=1" for 127.0.0.1 at 2012-05-06 11:44:27 +0430
+Served asset /cms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-05-06 11:44:28 +0430
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cms.js?body=1" for 127.0.0.1 at 2012-05-06 11:44:29 +0430
+Served asset /cms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-05-06 11:44:30 +0430
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-05-06 11:44:31 +0430
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/p.jpg" for 127.0.0.1 at 2012-05-06 11:44:31 +0430
+Served asset /p.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/z.jpg" for 127.0.0.1 at 2012-05-06 11:44:31 +0430
+Served asset /z.jpg - 304 Not Modified (1ms)
+
+
+Started GET "/assets/v.jpg" for 127.0.0.1 at 2012-05-06 11:44:31 +0430
+Served asset /v.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/w.jpg" for 127.0.0.1 at 2012-05-06 11:44:31 +0430
+Served asset /w.jpg - 304 Not Modified (0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (10.0ms)[0m  [1mCREATE TABLE "cms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "permalink" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (9.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (9.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (1.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120417203507')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (11.0ms)[0m  [1mCREATE TABLE "cms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "permalink" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (6.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (9.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120417203507')
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (1.0ms)[0m  select sqlite_version(*)
+  [1m[36m (10.0ms)[0m  [1mCREATE TABLE "cms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "permalink" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (7.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (6.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (7.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120417203507')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (1.0ms)[0m  select sqlite_version(*)
+  [1m[36m (5.0ms)[0m  [1mCREATE TABLE "cms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "permalink" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (5.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (5.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (5.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120417203507')
+
+
+Started GET "/cms" for 127.0.0.1 at 2012-05-06 12:00:57 +0430
+Processing by CmsController#index as HTML
+  [1m[35mCm Load (1.0ms)[0m  SELECT "cms".* FROM "cms" 
+  Rendered cms/index.html.erb within layouts/application (414.0ms)
+Completed 200 OK in 448ms (Views: 427.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cms" for 127.0.0.1 at 2012-05-06 12:00:59 +0430
+Processing by CmsController#index as HTML
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" [0m
+  Rendered cms/index.html.erb within layouts/application (418.0ms)
+Completed 200 OK in 432ms (Views: 431.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cms" for 127.0.0.1 at 2012-05-06 12:01:00 +0430
+Processing by CmsController#index as HTML
+  [1m[35mCm Load (1.0ms)[0m  SELECT "cms".* FROM "cms" 
+  Rendered cms/index.html.erb within layouts/application (432.0ms)
+Completed 200 OK in 447ms (Views: 446.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-05-06 12:01:02 +0430
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-05-06 12:01:02 +0430
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cms.css?body=1" for 127.0.0.1 at 2012-05-06 12:01:02 +0430
+Served asset /cms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-05-06 12:01:02 +0430
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-05-06 12:01:03 +0430
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cms.js?body=1" for 127.0.0.1 at 2012-05-06 12:01:04 +0430
+Served asset /cms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-05-06 12:01:05 +0430
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/v.jpg" for 127.0.0.1 at 2012-05-06 12:01:06 +0430
+Served asset /v.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/z.jpg" for 127.0.0.1 at 2012-05-06 12:01:06 +0430
+Served asset /z.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-05-06 12:01:06 +0430
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/w.jpg" for 127.0.0.1 at 2012-05-06 12:01:06 +0430
+Served asset /w.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/p.jpg" for 127.0.0.1 at 2012-05-06 12:01:06 +0430
+Served asset /p.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/cms/new" for 127.0.0.1 at 2012-05-06 12:01:49 +0430
+Processing by CmsController#new as HTML
+  Rendered cms/_form.html.erb (99.0ms)
+  Rendered cms/new.html.erb within layouts/application (102.0ms)
+Completed 200 OK in 133ms (Views: 133.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-05-06 12:01:49 +0430
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-05-06 12:01:50 +0430
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cms.css?body=1" for 127.0.0.1 at 2012-05-06 12:01:50 +0430
+Served asset /cms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-05-06 12:01:50 +0430
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-05-06 12:01:51 +0430
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cms.js?body=1" for 127.0.0.1 at 2012-05-06 12:01:52 +0430
+Served asset /cms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-05-06 12:01:53 +0430
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cms" for 127.0.0.1 at 2012-05-06 12:02:07 +0430
+Processing by CmsController#index as HTML
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" [0m
+  Rendered cms/index.html.erb within layouts/application (415.0ms)
+Completed 200 OK in 430ms (Views: 429.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-05-06 12:02:08 +0430
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cms.css?body=1" for 127.0.0.1 at 2012-05-06 12:02:08 +0430
+Served asset /cms.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-05-06 12:02:08 +0430
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-05-06 12:02:08 +0430
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-05-06 12:02:09 +0430
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/cms.js?body=1" for 127.0.0.1 at 2012-05-06 12:02:10 +0430
+Served asset /cms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-05-06 12:02:11 +0430
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cms/new" for 127.0.0.1 at 2012-05-06 12:02:21 +0430
+Processing by CmsController#new as HTML
+  Rendered cms/_form.html.erb (116.0ms)
+  Rendered cms/new.html.erb within layouts/application (120.0ms)
+Completed 200 OK in 133ms (Views: 133.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-05-06 12:02:22 +0430
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-05-06 12:02:23 +0430
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cms.css?body=1" for 127.0.0.1 at 2012-05-06 12:02:23 +0430
+Served asset /cms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-05-06 12:02:23 +0430
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-05-06 12:02:24 +0430
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cms.js?body=1" for 127.0.0.1 at 2012-05-06 12:02:25 +0430
+Served asset /cms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-05-06 12:02:26 +0430
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/cms" for 127.0.0.1 at 2012-05-06 12:02:56 +0430
+Processing by CmsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GdxipelJli9Sd0OiTxM+Oi+2w3aaxJt8UN/TSdzc8P0=", "cm"=>{"title"=>"Network", "permalink"=>"d,jpg", "body"=>"adfsfszfasgfs", "created_at(1i)"=>"2012", "created_at(2i)"=>"5", "created_at(3i)"=>"6", "created_at(4i)"=>"07", "created_at(5i)"=>"32", "updated_at(1i)"=>"2012", "updated_at(2i)"=>"5", "updated_at(3i)"=>"6", "updated_at(4i)"=>"07", "updated_at(5i)"=>"32"}, "commit"=>"Create Cm"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = 'Network' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered cms/_form.html.erb (124.0ms)
+  Rendered cms/new.html.erb within layouts/application (127.0ms)
+Completed 200 OK in 145ms (Views: 141.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-05-06 12:02:57 +0430
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cms.css?body=1" for 127.0.0.1 at 2012-05-06 12:02:57 +0430
+Served asset /cms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-05-06 12:02:57 +0430
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-05-06 12:02:57 +0430
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-05-06 12:02:57 +0430
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cms.js?body=1" for 127.0.0.1 at 2012-05-06 12:02:58 +0430
+Served asset /cms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-05-06 12:02:59 +0430
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cms" for 127.0.0.1 at 2012-05-06 12:03:21 +0430
+Processing by CmsController#index as HTML
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" [0m
+  Rendered cms/index.html.erb within layouts/application (411.0ms)
+Completed 200 OK in 427ms (Views: 426.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-05-06 12:03:22 +0430
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-05-06 12:03:23 +0430
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cms.css?body=1" for 127.0.0.1 at 2012-05-06 12:03:23 +0430
+Served asset /cms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-05-06 12:03:23 +0430
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-05-06 12:03:24 +0430
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cms.js?body=1" for 127.0.0.1 at 2012-05-06 12:03:25 +0430
+Served asset /cms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-05-06 12:03:26 +0430
+Served asset /application.js - 304 Not Modified (0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (11.0ms)[0m  [1mCREATE TABLE "cms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "permalink" varchar(255), "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (9.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (9.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (10.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120417203507')
