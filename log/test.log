@@ -680,3 +680,204 @@ Processing by CmsController#update as HTML
 Redirected to http://test.host/cms/980190962
 Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
   [1m[35m (15.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36m (109.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = '' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (15.6ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36m (124.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = '' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36m (62.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = '' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36m (124.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = 'My Book Title' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Exists (0.0ms)[0m  SELECT 1 FROM "cms" WHERE "cms"."title" = '' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36m (140.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = 'My Book Title' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Exists (0.0ms)[0m  SELECT 1 FROM "cms" WHERE "cms"."title" = '' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36m (124.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = 'My Book Title' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Exists (0.0ms)[0m  SELECT 1 FROM "cms" WHERE "cms"."title" = '' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (15.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36m (109.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = 'My Book Title' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Exists (0.0ms)[0m  SELECT 1 FROM "cms" WHERE "cms"."title" = 'My Book Title' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = '' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36m (124.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = 'My Book Title' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Exists (0.0ms)[0m  SELECT 1 FROM "cms" WHERE "cms"."title" = 'My Book Title' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = '' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36m (78.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Exists (15.6ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = 'My Book Title' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Exists (0.0ms)[0m  SELECT 1 FROM "cms" WHERE "cms"."title" = 'My Book Title' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = '' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36m (1256.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Exists (1.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = 'My Book Title' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Exists (1.0ms)[0m  SELECT 1 FROM "cms" WHERE "cms"."title" = 'My Book Title' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Exists (1.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = '' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36m (321.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = 'My Book Title' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Exists (0.0ms)[0m  SELECT 1 FROM "cms" WHERE "cms"."title" = 'My Book Title' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = '' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36m (9.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = '' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Exists (0.0ms)[0m  SELECT 1 FROM "cms" WHERE "cms"."title" = 'My Book Title' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Exists (1.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = 'My Book Title' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36m (7.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mCm Exists (1.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = '' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Unable to load product, underlying cause No such file to load -- product 
+
+ C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:317:in `rescue in depend_on'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:312:in `depend_on'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:225:in `require_dependency'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/fixtures.rb:751:in `try_to_load_dependency'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/fixtures.rb:766:in `block in require_fixture_classes'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/fixtures.rb:763:in `each'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/fixtures.rb:763:in `require_fixture_classes'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/fixtures.rb:746:in `fixtures'
+D:/pag/test/unit/cm_test.rb:4:in `<class:CmTest>'
+D:/pag/test/unit/cm_test.rb:3:in `<top (required)>'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-0.9.2.2/lib/rake/rake_test_loader.rb:15:in `require'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-0.9.2.2/lib/rake/rake_test_loader.rb:15:in `block in <main>'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-0.9.2.2/lib/rake/rake_test_loader.rb:4:in `select'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-0.9.2.2/lib/rake/rake_test_loader.rb:4:in `<main>'
+Unable to load product, underlying cause No such file to load -- product 
+
+ C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:317:in `rescue in depend_on'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:312:in `depend_on'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:225:in `require_dependency'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/fixtures.rb:751:in `try_to_load_dependency'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/fixtures.rb:766:in `block in require_fixture_classes'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/fixtures.rb:763:in `each'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/fixtures.rb:763:in `require_fixture_classes'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/fixtures.rb:746:in `fixtures'
+D:/pag/test/unit/cm_test.rb:4:in `<class:CmTest>'
+D:/pag/test/unit/cm_test.rb:3:in `<top (required)>'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-0.9.2.2/lib/rake/rake_test_loader.rb:15:in `require'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-0.9.2.2/lib/rake/rake_test_loader.rb:15:in `block in <main>'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-0.9.2.2/lib/rake/rake_test_loader.rb:4:in `select'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-0.9.2.2/lib/rake/rake_test_loader.rb:4:in `<main>'
+Unable to load product, underlying cause No such file to load -- product 
+
+ C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:317:in `rescue in depend_on'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:312:in `depend_on'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/dependencies.rb:225:in `require_dependency'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/fixtures.rb:751:in `try_to_load_dependency'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/fixtures.rb:766:in `block in require_fixture_classes'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/fixtures.rb:763:in `each'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/fixtures.rb:763:in `require_fixture_classes'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/fixtures.rb:746:in `fixtures'
+D:/pag/test/unit/cm_test.rb:4:in `<class:CmTest>'
+D:/pag/test/unit/cm_test.rb:3:in `<top (required)>'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-0.9.2.2/lib/rake/rake_test_loader.rb:15:in `require'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-0.9.2.2/lib/rake/rake_test_loader.rb:15:in `block in <main>'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-0.9.2.2/lib/rake/rake_test_loader.rb:4:in `select'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-0.9.2.2/lib/rake/rake_test_loader.rb:4:in `<main>'
