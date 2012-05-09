@@ -1029,3 +1029,640 @@ SQLite3::SQLException: table cms has no column named description: INSERT INTO "c
   [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = 'Content management system(CMS).' LIMIT 1[0m
   [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
   [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('Content management system(CMS).', 'content management system is a web site that have many pages.', 'The content management pages have database and network topic .', '2012-04-14', '2012-03-11', 409233057)[0m
+  [1m[35m (140.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Exists (0.0ms)[0m  SELECT 1 FROM "cms" WHERE "cms"."title" = '' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 409233057]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = 'Content management system(CMS).' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('Content management system(CMS).', 'content management system is a web site that have many pages.', 'The content management pages have database and network topic .', '2012-04-14', '2012-03-11', 409233057)[0m
+  [1m[35m (62.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "cms" [0m
+Processing by CmsController#create as HTML
+  Parameters: {"cm"=>{"title"=>"hgjhb", "permalink"=>"fdcd", "body"=>"nnnmj", "created_at"=>"03/04/2012", "updated_at"=>"03/05/2012"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = 'hgjhb' LIMIT 1[0m
+  [1m[35mSQL (15.6ms)[0m  INSERT INTO "cms" ("body", "created_at", "permalink", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["body", "nnnmj"], ["created_at", Tue, 03 Apr 2012 00:00:00 UTC +00:00], ["permalink", "fdcd"], ["title", "hgjhb"], ["updated_at", Thu, 03 May 2012 00:00:00 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/cms/980190963
+Completed 302 Found in 172ms (ActiveRecord: 15.6ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "cms" 
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "cms" 
+Processing by CmsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "cms" WHERE "cms"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/cms
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "cms" [0m
+  [1m[35m (15.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+Processing by CmsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "980190962"]]
+  Rendered cms/_form.html.erb (46.8ms)
+Completed 200 OK in 250ms (Views: 249.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+Processing by CmsController#index as HTML
+  [1m[36mCm Load (15.6ms)[0m  [1mSELECT "cms".* FROM "cms" ORDER BY title[0m
+Completed 200 OK in 16ms (Views: 0.0ms | ActiveRecord: 15.6ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+Processing by CmsController#new as HTML
+  Rendered cms/_form.html.erb (31.2ms)
+Completed 200 OK in 47ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+Processing by CmsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+Processing by CmsController#update as HTML
+  Parameters: {"cm"=>{"title"=>"hgjhb", "permalink"=>"fdcd", "body"=>"nnnmj", "created_at"=>"03/04/2012", "updated_at"=>"03/05/2012"}, "id"=>"980190962"}
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mCm Exists (0.0ms)[0m  SELECT 1 FROM "cms" WHERE ("cms"."title" = 'hgjhb' AND "cms"."id" != 980190962) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mUPDATE "cms" SET "title" = 'hgjhb', "permalink" = 'fdcd', "body" = 'nnnmj', "created_at" = '2012-04-03 00:00:00.000000', "updated_at" = '2012-05-03 00:00:00.000000' WHERE "cms"."id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/cms/980190962
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by ListController#index as HTML
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" ORDER BY title[0m
+Completed 200 OK in 78ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('Content management system(CMS).', 'content management system is a web site that have many pages.', 'The content management pages have database and network topic .', '2012-04-14', '2012-03-11', 409233057)[0m
+  [1m[35m (124.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Exists (0.0ms)[0m  SELECT 1 FROM "cms" WHERE "cms"."title" = '' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 409233057]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = 'Content management system(CMS).' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('Content management system(CMS).', 'content management system is a web site that have many pages.', 'The content management pages have database and network topic .', '2012-04-14', '2012-03-11', 409233057)[0m
+  [1m[35m (140.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "cms" [0m
+Processing by CmsController#create as HTML
+  Parameters: {"cm"=>{"title"=>"hgjhb", "permalink"=>"fdcd", "body"=>"nnnmj", "created_at"=>"03/04/2012", "updated_at"=>"03/05/2012"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = 'hgjhb' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "cms" ("body", "created_at", "permalink", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["body", "nnnmj"], ["created_at", Tue, 03 Apr 2012 00:00:00 UTC +00:00], ["permalink", "fdcd"], ["title", "hgjhb"], ["updated_at", Thu, 03 May 2012 00:00:00 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/cms/980190963
+Completed 302 Found in 172ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "cms" 
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "cms" 
+Processing by CmsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "cms" WHERE "cms"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/cms
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "cms" [0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+Processing by CmsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "980190962"]]
+  Rendered cms/_form.html.erb (46.8ms)
+Completed 200 OK in 250ms (Views: 249.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+Processing by CmsController#index as HTML
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" ORDER BY title[0m
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+Processing by CmsController#new as HTML
+  Rendered cms/_form.html.erb (31.2ms)
+Completed 200 OK in 47ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+Processing by CmsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+Processing by CmsController#update as HTML
+  Parameters: {"cm"=>{"title"=>"hgjhb", "permalink"=>"fdcd", "body"=>"nnnmj", "created_at"=>"03/04/2012", "updated_at"=>"03/05/2012"}, "id"=>"980190962"}
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mCm Exists (0.0ms)[0m  SELECT 1 FROM "cms" WHERE ("cms"."title" = 'hgjhb' AND "cms"."id" != 980190962) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mUPDATE "cms" SET "title" = 'hgjhb', "permalink" = 'fdcd', "body" = 'nnnmj', "created_at" = '2012-04-03 00:00:00.000000', "updated_at" = '2012-05-03 00:00:00.000000' WHERE "cms"."id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/cms/980190962
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by ListController#index as HTML
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" ORDER BY title[0m
+Completed 200 OK in 78ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (15.6ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('Content management system(CMS).', 'content management system is a web site that have many pages.', 'The content management pages have database and network topic .', '2012-04-14', '2012-03-11', 409233057)[0m
+  [1m[35m (140.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Exists (0.0ms)[0m  SELECT 1 FROM "cms" WHERE "cms"."title" = '' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 409233057]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = 'Content management system(CMS).' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('Content management system(CMS).', 'content management system is a web site that have many pages.', 'The content management pages have database and network topic .', '2012-04-14', '2012-03-11', 409233057)[0m
+  [1m[35m (62.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "cms" [0m
+Processing by CmsController#create as HTML
+  Parameters: {"cm"=>{"title"=>"hgjhb", "permalink"=>"fdcd", "body"=>"nnnmj", "created_at"=>"03/04/2012", "updated_at"=>"03/05/2012"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = 'hgjhb' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "cms" ("body", "created_at", "permalink", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["body", "nnnmj"], ["created_at", Tue, 03 Apr 2012 00:00:00 UTC +00:00], ["permalink", "fdcd"], ["title", "hgjhb"], ["updated_at", Thu, 03 May 2012 00:00:00 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/cms/980190963
+Completed 302 Found in 156ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "cms" 
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "cms" 
+Processing by CmsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "cms" WHERE "cms"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/cms
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "cms" [0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+Processing by CmsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "980190962"]]
+  Rendered cms/_form.html.erb (46.8ms)
+Completed 200 OK in 250ms (Views: 249.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+Processing by CmsController#index as HTML
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" ORDER BY title[0m
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+Processing by CmsController#new as HTML
+  Rendered cms/_form.html.erb (46.8ms)
+Completed 200 OK in 47ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+Processing by CmsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+Processing by CmsController#update as HTML
+  Parameters: {"cm"=>{"title"=>"hgjhb", "permalink"=>"fdcd", "body"=>"nnnmj", "created_at"=>"03/04/2012", "updated_at"=>"03/05/2012"}, "id"=>"980190962"}
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mCm Exists (0.0ms)[0m  SELECT 1 FROM "cms" WHERE ("cms"."title" = 'hgjhb' AND "cms"."id" != 980190962) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mUPDATE "cms" SET "title" = 'hgjhb', "permalink" = 'fdcd', "body" = 'nnnmj', "created_at" = '2012-04-03 00:00:00.000000', "updated_at" = '2012-05-03 00:00:00.000000' WHERE "cms"."id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/cms/980190962
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by ListController#index as HTML
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" ORDER BY title[0m
+Completed 200 OK in 78ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (15.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (15.6ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('Content management system(CMS).', 'content management system is a web site that have many pages.', 'The content management pages have database and network topic .', '2012-04-14', '2012-03-11', 409233057)[0m
+  [1m[35m (78.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Exists (0.0ms)[0m  SELECT 1 FROM "cms" WHERE "cms"."title" = '' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 409233057]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = 'Content management system(CMS).' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('Content management system(CMS).', 'content management system is a web site that have many pages.', 'The content management pages have database and network topic .', '2012-04-14', '2012-03-11', 409233057)[0m
+  [1m[35m (140.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "cms" [0m
+Processing by CmsController#create as HTML
+  Parameters: {"cm"=>{"title"=>"hgjhb", "permalink"=>"fdcd", "body"=>"nnnmj", "created_at"=>"03/04/2012", "updated_at"=>"03/05/2012"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = 'hgjhb' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "cms" ("body", "created_at", "permalink", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["body", "nnnmj"], ["created_at", Tue, 03 Apr 2012 00:00:00 UTC +00:00], ["permalink", "fdcd"], ["title", "hgjhb"], ["updated_at", Thu, 03 May 2012 00:00:00 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/cms/980190963
+Completed 302 Found in 172ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "cms" 
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "cms" 
+Processing by CmsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "cms" WHERE "cms"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/cms
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "cms" [0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+Processing by CmsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "980190962"]]
+  Rendered cms/_form.html.erb (46.8ms)
+Completed 200 OK in 250ms (Views: 234.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+Processing by CmsController#index as HTML
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" ORDER BY title[0m
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+Processing by CmsController#new as HTML
+  Rendered cms/_form.html.erb (31.2ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+Processing by CmsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 16ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+Processing by CmsController#update as HTML
+  Parameters: {"cm"=>{"title"=>"hgjhb", "permalink"=>"fdcd", "body"=>"nnnmj", "created_at"=>"03/04/2012", "updated_at"=>"03/05/2012"}, "id"=>"980190962"}
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mCm Exists (0.0ms)[0m  SELECT 1 FROM "cms" WHERE ("cms"."title" = 'hgjhb' AND "cms"."id" != 980190962) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mUPDATE "cms" SET "title" = 'hgjhb', "permalink" = 'fdcd', "body" = 'nnnmj', "created_at" = '2012-04-03 00:00:00.000000', "updated_at" = '2012-05-03 00:00:00.000000' WHERE "cms"."id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/cms/980190962
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by ListController#index as HTML
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" ORDER BY title[0m
+Completed 200 OK in 78ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('Content management system(CMS).', 'content management system is a web site that have many pages.', 'The content management pages have database and network topic .', '2012-04-14', '2012-03-11', 409233057)[0m
+  [1m[35m (78.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Exists (0.0ms)[0m  SELECT 1 FROM "cms" WHERE "cms"."title" = '' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 409233057]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = 'Content management system(CMS).' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('Content management system(CMS).', 'content management system is a web site that have many pages.', 'The content management pages have database and network topic .', '2012-04-14', '2012-03-11', 409233057)[0m
+  [1m[35m (62.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "cms" [0m
+Processing by CmsController#create as HTML
+  Parameters: {"cm"=>{"title"=>"hgjhb", "permalink"=>"fdcd", "body"=>"nnnmj", "created_at"=>"03/04/2012", "updated_at"=>"03/05/2012"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = 'hgjhb' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "cms" ("body", "created_at", "permalink", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["body", "nnnmj"], ["created_at", Tue, 03 Apr 2012 00:00:00 UTC +00:00], ["permalink", "fdcd"], ["title", "hgjhb"], ["updated_at", Thu, 03 May 2012 00:00:00 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/cms/980190963
+Completed 302 Found in 156ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "cms" 
+  [1m[36m (15.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "cms" 
+Processing by CmsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "cms" WHERE "cms"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/cms
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "cms" [0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+Processing by CmsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "980190962"]]
+  Rendered cms/_form.html.erb (46.8ms)
+Completed 200 OK in 250ms (Views: 234.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+Processing by CmsController#index as HTML
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" ORDER BY title[0m
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+Processing by CmsController#new as HTML
+  Rendered cms/_form.html.erb (31.2ms)
+Completed 200 OK in 47ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+Processing by CmsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+Processing by CmsController#update as HTML
+  Parameters: {"cm"=>{"title"=>"hgjhb", "permalink"=>"fdcd", "body"=>"nnnmj", "created_at"=>"03/04/2012", "updated_at"=>"03/05/2012"}, "id"=>"980190962"}
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mCm Exists (0.0ms)[0m  SELECT 1 FROM "cms" WHERE ("cms"."title" = 'hgjhb' AND "cms"."id" != 980190962) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mUPDATE "cms" SET "title" = 'hgjhb', "permalink" = 'fdcd', "body" = 'nnnmj', "created_at" = '2012-04-03 00:00:00.000000', "updated_at" = '2012-05-03 00:00:00.000000' WHERE "cms"."id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/cms/980190962
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (15.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by ListController#index as HTML
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" ORDER BY title[0m
+Completed 200 OK in 78ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (15.6ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('Content management system(CMS).', 'content management system is a web site that have many pages.', 'The content management pages have database and network topic .', '2012-04-14', '2012-03-11', 409233057)[0m
+  [1m[35m (62.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Exists (0.0ms)[0m  SELECT 1 FROM "cms" WHERE "cms"."title" = '' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 409233057]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = 'Content management system(CMS).' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('Content management system(CMS).', 'content management system is a web site that have many pages.', 'The content management pages have database and network topic .', '2012-04-14', '2012-03-11', 409233057)[0m
+  [1m[35m (78.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "cms" [0m
+Processing by CmsController#create as HTML
+  Parameters: {"cm"=>{"title"=>"hgjhb", "permalink"=>"fdcd", "body"=>"nnnmj", "created_at"=>"03/04/2012", "updated_at"=>"03/05/2012"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = 'hgjhb' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "cms" ("body", "created_at", "permalink", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["body", "nnnmj"], ["created_at", Tue, 03 Apr 2012 00:00:00 UTC +00:00], ["permalink", "fdcd"], ["title", "hgjhb"], ["updated_at", Thu, 03 May 2012 00:00:00 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/cms/980190963
+Completed 302 Found in 172ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "cms" 
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "cms" 
+Processing by CmsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "cms" WHERE "cms"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/cms
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "cms" [0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+Processing by CmsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "980190962"]]
+  Rendered cms/_form.html.erb (31.2ms)
+Completed 200 OK in 265ms (Views: 265.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+Processing by CmsController#index as HTML
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" ORDER BY title[0m
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+Processing by CmsController#new as HTML
+  Rendered cms/_form.html.erb (31.2ms)
+Completed 200 OK in 47ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+Processing by CmsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+Processing by CmsController#update as HTML
+  Parameters: {"cm"=>{"title"=>"hgjhb", "permalink"=>"fdcd", "body"=>"nnnmj", "created_at"=>"03/04/2012", "updated_at"=>"03/05/2012"}, "id"=>"980190962"}
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mCm Exists (0.0ms)[0m  SELECT 1 FROM "cms" WHERE ("cms"."title" = 'hgjhb' AND "cms"."id" != 980190962) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mUPDATE "cms" SET "title" = 'hgjhb', "permalink" = 'fdcd', "body" = 'nnnmj', "created_at" = '2012-04-03 00:00:00.000000', "updated_at" = '2012-05-03 00:00:00.000000' WHERE "cms"."id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/cms/980190962
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by ListController#index as HTML
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" ORDER BY title[0m
+Completed 200 OK in 62ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('Content management system(CMS).', 'content management system is a web site that have many pages.', 'The content management pages have database and network topic .', '2012-04-14', '2012-03-11', 409233057)[0m
+  [1m[35m (93.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Exists (0.0ms)[0m  SELECT 1 FROM "cms" WHERE "cms"."title" = '' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 409233057]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = 'Content management system(CMS).' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "cms"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', '2012-04-17 13:35:07.000000', '2012-04-17 13:35:07.000000', 298486374)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "cms" ("title", "permalink", "body", "created_at", "updated_at", "id") VALUES ('Content management system(CMS).', 'content management system is a web site that have many pages.', 'The content management pages have database and network topic .', '2012-04-14', '2012-03-11', 409233057)[0m
+  [1m[35m (140.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "cms" [0m
+Processing by CmsController#create as HTML
+  Parameters: {"cm"=>{"title"=>"hgjhb", "permalink"=>"fdcd", "body"=>"nnnmj", "created_at"=>"03/04/2012", "updated_at"=>"03/05/2012"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mCm Exists (0.0ms)[0m  [1mSELECT 1 FROM "cms" WHERE "cms"."title" = 'hgjhb' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "cms" ("body", "created_at", "permalink", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["body", "nnnmj"], ["created_at", Tue, 03 Apr 2012 00:00:00 UTC +00:00], ["permalink", "fdcd"], ["title", "hgjhb"], ["updated_at", Thu, 03 May 2012 00:00:00 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/cms/980190963
+Completed 302 Found in 172ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "cms" 
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "cms" 
+Processing by CmsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "cms" WHERE "cms"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/cms
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "cms" [0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+Processing by CmsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", "980190962"]]
+  Rendered cms/_form.html.erb (46.8ms)
+Completed 200 OK in 234ms (Views: 234.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+Processing by CmsController#index as HTML
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" ORDER BY title[0m
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", 980190962]]
+Processing by CmsController#new as HTML
+  Rendered cms/_form.html.erb (31.2ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+Processing by CmsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mCm Load (15.6ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 16ms (Views: 0.0ms | ActiveRecord: 15.6ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1[0m  [["id", 980190962]]
+Processing by CmsController#update as HTML
+  Parameters: {"cm"=>{"title"=>"hgjhb", "permalink"=>"fdcd", "body"=>"nnnmj", "created_at"=>"03/04/2012", "updated_at"=>"03/05/2012"}, "id"=>"980190962"}
+  [1m[35mCm Load (0.0ms)[0m  SELECT "cms".* FROM "cms" WHERE "cms"."id" = ? ORDER BY title LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mCm Exists (0.0ms)[0m  SELECT 1 FROM "cms" WHERE ("cms"."title" = 'hgjhb' AND "cms"."id" != 980190962) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mUPDATE "cms" SET "title" = 'hgjhb', "permalink" = 'fdcd', "body" = 'nnnmj', "created_at" = '2012-04-03 00:00:00.000000', "updated_at" = '2012-05-03 00:00:00.000000' WHERE "cms"."id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/cms/980190962
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by ListController#index as HTML
+  [1m[36mCm Load (0.0ms)[0m  [1mSELECT "cms".* FROM "cms" ORDER BY title[0m
+Completed 200 OK in 78ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction

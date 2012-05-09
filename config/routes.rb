@@ -1,6 +1,8 @@
 Page::Application.routes.draw do
-  resources :cms
+  get "list/index"
 
+  resources :cms
+root :to =>'list#index', :as =>'list'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -6,22 +6,48 @@
   <%= csrf_meta_tags %>
   <title>Page</title>
 </head>
-<body id="color">
-<div class="cms">
-	  	<div id="columns" >
-<div class="side" >
+<body id="store" >
+<div id="banner" >
+<%= @page_title || "Content management system(CMS)" %>
+</div>
+<div id="columns" >
+<div id="side" >
+<a href="http://www.w3school" >w3school</a><br />
+<a href="http://www.faq" >Questions</a><br />
+<a href="http://www.news" >News</a><br />
+<a href="http://www.contact" >contact</a><br />
+</div>
+</div>
+<div id="columns" >
+<div id="side" >
 <a href="http://www.facebook.com" >facebook</a><br />
 <a href="http://www.googletarnslate.com" >googletarnslate</a><br />
 <a href="http://www.ruby.com" >Ruby</a><br />
 <a href="http://www..../contact" >help</a><br />
-
 </div>
+</div>
+<div id="columns" >
+<div id="side" >
+<a href="http://www.yahoo.com" >yahoo</a><br />
+<a href="http://www.youtub.com" >Youtube</a><br />
+<a href="http://www.amazon.com" >amazon</a><br />
+<a href="http://www.google.com">google</a><br />
+</div>
+</div>
+<div id="columns" >
+<div id="side" >
+<a href="http://www.softepedia.com" >softepedia</a><br />
+<a href="http://www.java.com" >java</a><br />
+<a href="http://www.ruby.com" >Rubycode</a><br />
+<a href="http://www.mac-dl.com" >mac-dl</a><br />
+</div>
+</div>
+
 <div class="cms">
+<div id="main" >
 <%= yield %>
 </div>
-
-
+</div>
 </body>
-
 </html>
 

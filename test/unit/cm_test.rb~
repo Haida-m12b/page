@@ -1,0 +1,49 @@
+require 'test_helper'
+
+class CmTest < ActiveSupport::TestCase
+  
+  # test "the truth" do
+  #   assert true
+  #end
+
+  test "product attributes must not be empty" do
+cm = Cm.new
+assert cm.invalid?
+assert cm.errors[:title].any?
+assert cm.errors[:permalink].any?
+assert cm.errors[:body].any?
+assert cm.errors[:created_at].any?
+assert cm.errors[:updated_at].any?
+end
+test "cm update_at" do
+cm = Cm.new(:title => "My Book Title",
+:permalink => "hello",
+:updated_at => '3/04/12')
+cm.updated_at = -1
+assert cm.invalid?
+assert_equal "update at this time",
+cm.errors[:updated_at].join(';')
+cm.updated_at= 0
+assert cm.invalid?
+assert_equal "update at this moment",
+cm.errors[:updated_at].join(';')
+cm.updated_at = 1
+assert cm.valid?
+end
+def new_cm(created_at)
+Cm.new(:title => "My Book Title",
+:permalink => "dfjjn",
+:body => 1,
+:created_at => created_at)
+end
+test "created_at" do
+ok = %w{ hello}
+bad = %w{time to up}
+ok.each do |name|
+assert new_cm(name).valid?, "#{name} shouldn't be invalid"
+end
+bad.each do |name|
+assert new_cm (name).invalid?, "#{name} shouldn't be valid"
+end
+end
+end

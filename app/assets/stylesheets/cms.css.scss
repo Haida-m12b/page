@@ -1,26 +1,16 @@
-
-// Place all the styles related to the cms controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 .cms {
-  h1 {color:pink;} 
-h1 {text-align:center;} 
+  h1 {color:black;} 
 
 table {
 border-collapse: collapse;
-
 }
 ul.a {list-style-type:circle;}
 .tablea {
-
 }
 #columns {
 background: #ffff99;
 }
-
-
 table tr td {
- 
 vertical-align: top;
 }
 .list_image {
@@ -51,12 +41,9 @@ a.one:link {color:#ff0000;}ul.a {list-style-type:circle;}
 table,th,td {
 border:1px solid #ffcc00; }
 .side {
-align: bottom;
+align: left;
 padding-top: 1em;
 padding-left: 1em;
-padding-bottom: 1em;
-width: 16em;
-
 }
 #side a {
 color: #bfb;

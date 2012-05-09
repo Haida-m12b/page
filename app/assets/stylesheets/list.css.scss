@@ -1,0 +1,31 @@
+#banner {
+background: green;
+padding-top: 10px;
+padding-bottom: 10px;
+border-bottom: 2px solid;
+font: small-caps 40px/40px "Times New Roman", serif;
+color: black;
+text-align: center;
+}
+#columns {
+background: red;
+}
+#main {
+padding-top: 4em;
+padding-left: 2em;
+background: #20B2AA
+}
+#side {
+float: left;
+padding-top: 1em;
+padding-left: 1em;
+padding-right: 0em;
+padding-bottom: 1em;
+width: 16em;
+height: 5em;
+background: #F0E68C;
+}
+#side a {
+color: black;
+font-size: small;
+}

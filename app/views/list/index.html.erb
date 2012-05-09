@@ -1,0 +1,14 @@
+<body>
+
+<% if notice %>
+<p id="notice"><%= notic %></p>
+<% end %>
+<% @cms.each do |cm| %>
+	<div class="entry">
+		<% image_tag(cm.permalink)%>
+		<h3><%= cm.title %></h3>
+		<%= sanitize(cm.permalink) %>
+	</div>
+<% end %>
+
+</body>
